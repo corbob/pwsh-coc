@@ -1,0 +1,32 @@
+{
+  "name": "powershell",
+  "displayName": "PowerShell Preview",
+  "version": "0.0.1",
+  "description": "(Preview) Develop PowerShell scripts in neovim",
+  "engines": {
+    "coc": ">= 0.0.24"
+  },
+  "license": "MIT",
+  "main": "extension/main.js",
+  "activationEvents": [
+    "onLanguage:powershell",
+    "onLanguage:ps1"
+  ],
+  "dependencies": {
+    "vscode-languageclient": "~5.2.1"
+  },
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "PowerShell Configuration",
+      "properties": {
+        "powershell.powerShellExePath": {
+          "type": "string",
+          "default": "",
+          "isExecutable": true,
+          "description": "Specifies the full path to a PowerShell executable. Changes the installation of PowerShell used for language and debugging services."
+        }
+      }
+    }
+  }
+}
